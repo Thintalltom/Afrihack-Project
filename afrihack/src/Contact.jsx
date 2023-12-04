@@ -1,7 +1,9 @@
 import React from "react";
 import crop3 from "./assets/crop3.png";
 import Agrisage from "./assets/Agrisage.png";
+import { HiArrowUpRight } from "react-icons/hi2";
 import "./Work.css";
+import { Link } from "react-router-dom";
 const Contact = () => {
   return (
     <div name='contact' className="contactDiv bg-[#1e1e1e] h-[60rem] ">
@@ -15,9 +17,11 @@ const Contact = () => {
         <a href="mailto:adeyanjutomide@gmail.com">adeyanjutomide@gmail.com</a>
         <a href="mailto:ayomidet905@gmail.com">ayomidet905@gmail.com</a>
         <a href="mailto:adeyemimeshack@gmail.com">adeyemimeshack@gmail.com</a>
-        <button className="border-[1px] border-green-500 text-white p-[10px] mx-auto mt-[100px]">
-          Start Now
+        <Link to='/query'>
+        <button className="border-[1px] border-green-500 text-green-500 rounded-[10px] flex gap-[10px] justify-center items-center text-white p-[10px] mx-auto mt-[100px] w-[150px]">
+          Start Now <span><HiArrowUpRight /></span> 
         </button>
+        </Link>
       </div>
       <img src={Agrisage} className=" mx-auto mt-[50px]" />
     </div>

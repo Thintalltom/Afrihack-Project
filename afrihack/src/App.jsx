@@ -16,7 +16,7 @@ function App() {
 
   return (
 
-      <div className='h-screen bg-[#1E1E1E]'>
+      <div className='h-[70rem] bg-[#1e1e1e]'>
          <Navbar />
         <Routes>
         <Route path='/' element={  <Home />} />

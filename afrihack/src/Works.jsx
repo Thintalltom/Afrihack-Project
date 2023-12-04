@@ -8,7 +8,7 @@ import B3 from './assets/B3.png';
 const Works = () => {
   return (
     <div name='work' className=" bg-[#1e1e1e] colorit h-[70rem] mt-[-2px]">
-      <p className="text-center text-white font-bold text-xl">How it Works </p>
+      <p className="text-center text-white font-bold text-xl ">How it Works </p>
       <div className="flex justify-center items-center flex-col ">
         <div className="w-[900px] flex justify-around WorkFlex items-center h-[300px] mt-4">
           <div className="flexOrder1">

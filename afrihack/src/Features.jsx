@@ -3,7 +3,7 @@ import './Feature.css'
 
 const Features = () => {
   return (
-    <div name='features' className=" bg-[#1e1e1e] h-[20rem] FeatureBox">
+    <div name='features' className=" bg-[#1e1e1e] h-[30rem] FeatureBox">
       <p className="text-center text-white text-2xl font-bold mt-4">KEY FEATURES</p>
       <div className="mt-4 flex justify-center items-center features ">
         <div className="border-[0.5px] rounded-[20px] w-[400px] featBox h-[150px] p-4">

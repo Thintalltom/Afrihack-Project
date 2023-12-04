@@ -17,15 +17,15 @@ const Navbar = () => {
   };
   return (
     <div className=" home">
-      <div className="agrisageBox flex justify-around bg-[#1e1e1e] cursor-pointer fixed  w-[100vw]   p-[10px]">
+      <div className="agrisageBox border-b-[0.5px] flex justify-around bg-[#1e1e1e] cursor-pointer fixed  w-[100vw]   p-[10px]">
         <Link to="/">
-          <div className="flex   flex-row gap-[5px] items-center w-[200px]">
+          <div className="flex   flex-row gap-[20px] items-center w-[200px]">
             <img src={Logo} className="w-[40px]" />
             <p className="text-slate-200 font-bold">Agrisage</p>
           </div>
         </Link>
 
-        <div className="text-slate-200 flex gap-[20px]">
+        <div className="text-slate-200 flex justify-center items-center gap-[20px]">
           <LinkRoll to="features" smooth={true} duration={500}>
             Features
           </LinkRoll>
@@ -39,11 +39,13 @@ const Navbar = () => {
             Contact us
           </LinkRoll>
         </div>
+        <div className="flex justify-center items-center">
         <Link to="/query">
-          <button className="border-2 border-white text-sm  p-[10px] text-slate-200 h-[40px] rounded-[5px]">
+          <button className="border-[0.5px] border-white text-sm  p-[10px] items-center justify-center flex text-slate-200 h-[30px] rounded-[5px]">
             Get Started
           </button>
         </Link>
+        </div>
       </div>
 
       {/*Navbar for small screen*/}

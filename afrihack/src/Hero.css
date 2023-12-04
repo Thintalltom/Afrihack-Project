@@ -1,12 +1,15 @@
 .heroPage {
-  min-height: 600px;
+  height: 60rem;
   padding: 20px;
+
 }
 .headerText1 {
   font-size: 4rem;
 }
 .Heroflex {
   display: flex;
+  
+
 }
 .flexItems {
   height: 600px;
@@ -27,6 +30,7 @@
   width: 55rem;
   display: flex;
   flex-direction: column;
+ 
 }
 .headerBox p {
   line-height: 1.4em;
@@ -35,7 +39,7 @@
   max-width: 450px;
   color: black;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 700px) {
   .Heroflex {
     display: flex;
     flex-direction: column;

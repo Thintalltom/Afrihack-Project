@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { useNavigate } from "react-router-dom";
 import Axios from 'axios';
 import './Feature.css'
@@ -25,6 +25,7 @@ const Query = ({country, setCountry, crop, setCrop, waterlevel, setWaterlevel, p
       };
     
       const navigate= useNavigate()
+      const [loading, setLoading] = useState(false)
 
       const addInfo = (e) => {
         const jsonData = {
@@ -37,7 +38,7 @@ const Query = ({country, setCountry, crop, setCrop, waterlevel, setWaterlevel, p
         };
       
         // Set loading to true when starting the API call
-      
+        setLoading(true)
       
         Axios.post(
           "https://klusterthon-precision-farming.onrender.com/result",
@@ -49,18 +50,20 @@ const Query = ({country, setCountry, crop, setCrop, waterlevel, setWaterlevel, p
         .then((response) => {
           // Process the response as needed
           setInfo(response.data);
-          console.log(info)
+       
           navigate('/answer')
         })
         .catch((error) => {
           // Handle errors if necessary
           console.error("Error fetching data:", error);
-        });
+        }).finally(() => {
+          setLoading(false)
+        })
       };
       
     
   return (
-    <div>
+    <div className='queryBox bg-[#1e1e1e] h-[70rem]'>
         <div name='query' className="flex items-center    justify-center align-center  p-4 ">
          <p className='text-white text-center mt-[70px]'>To predict your crop's harvest season, kindly fill in your <br /> crop's name, soil condition, weather information and <br /> location in the boxes provided below </p>
         </div>
@@ -108,9 +111,16 @@ const Query = ({country, setCountry, crop, setCrop, waterlevel, setWaterlevel, p
           placeholder="input the name of the country"
           className=" border-[0.5px] bg-[#1e1e1e]  lg:w-[500px] xs:w-[80vw] sm:w-[50vw] rounded-[10px] p-4"
         />
-         <div className='flex justify-center items-center mt-[10px]'>
+        {
+          loading ? (
+            <p>Loading...</p>
+          ) : (
+            <div className='flex justify-center items-center mt-[10px]'>
             <button onClick={addInfo} className='bg-green-900 text-white lg:w-[500px] sm:w-[40vw] btn rounded-[10px] shadow-lg h-[50px]'>Send</button>
         </div>
+          )
+        }
+        
         </div>
         </div>
 
