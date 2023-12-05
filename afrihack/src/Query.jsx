@@ -5,23 +5,67 @@ import './Feature.css'
 
 const Query = ({country, setCountry, crop, setCrop, waterlevel, setWaterlevel, ph, setPh, 
     temperature, setTemperature, humidity, setHumidity, info, setInfo}) => {
+
+      const[errMessage1, setErrMessage1] = useState('')
+      const[errMessage2, setErrMessage2] = useState('')
+      const[errMessage3, setErrMessage3] = useState('')
+      const[errMessage4, setErrMessage4] = useState('')
+      const[errMessage5, setErrMessage5] = useState('')
+      const[errMessage6, setErrMessage6] = useState('')
     const getCountry = (e) => {
-        setCountry(e.target.value);
+      const newValue = e.target.value;
+      if(/[^a-zA-Z]/.test(newValue)){
+        setErrMessage5('Error: Please enter only text')
+      }else{
+        setErrMessage5('');
+        setCountry(newValue);
+      }
       };
       const getCrop = (e) => {
-        setCrop(e.target.value);
+        const newValue = e.target.value;
+        if(/[^a-zA-Z]/.test(newValue)){
+          setErrMessage6('Error: Please enter only text')
+        }else{
+          setErrMessage6('');
+          setCrop(newValue);
+        }
       };
       const getPh = (e) => {
-        setPh(e.target.value);
+        const newValue = e.target.value;
+        if(/[^0-9]/.test(newValue)){
+          setErrMessage1('Error: Please enter only numbers')
+        }else{
+          setErrMessage1('');
+          setPh(newValue)
+        }
       };
       const getWater = (e) => {
-        setWaterlevel(e.target.value);
+        const newValue = e.target.value;
+        if(/[^0-9]/.test(newValue)){
+          setErrMessage2('Error: Please enter only numbers')
+        }else{
+          setErrMessage2('');
+          setWaterlevel(newValue);
+        }
       };
       const getHumid = (e) => {
-        setHumidity(e.target.value);
+        const newValue = e.target.value;
+        if(/[^0-9]/.test(newValue)){
+          setErrMessage3('Error: Please enter only numbers')
+        }else{
+          setErrMessage3('');
+          setHumidity(newValue);
+        }
       };
       const getTemp = (e) => {
-        setTemperature(e.target.value);
+        const newValue = e.target.value;
+        if(/[^0-9]/.test(newValue)){
+          setErrMessage4('Error: Please enter only numbers')
+        }else{
+          setErrMessage4('');
+          setTemperature(newValue);
+        }
+   
       };
     
       const navigate= useNavigate()
@@ -69,6 +113,7 @@ const Query = ({country, setCountry, crop, setCrop, waterlevel, setWaterlevel, p
         </div>
         <div className='flex justify-center items-center'>
         <div className='flex text-white flex-col border-[0.5px] rounded-[10px] p-[30px] w-[600px] fillBox items-center justify-center gap-[20px]'>
+        {errMessage4 && <p className='text-red-500'>{errMessage4}</p>}
         <input
           type="text"
           placeholder="input temperature"
@@ -76,6 +121,7 @@ const Query = ({country, setCountry, crop, setCrop, waterlevel, setWaterlevel, p
           onChange={getTemp}
           className="lg:w-[500px] bg-[#1e1e1e] rounded-[10px] xs:w-[80vw] sm:w-[50vw] p-4  border-[0.5px]"
         />
+         {errMessage3 && <p className='text-red-500'>{errMessage3}</p>}
         <input
           type="text"
           placeholder="input the humidity"
@@ -83,6 +129,7 @@ const Query = ({country, setCountry, crop, setCrop, waterlevel, setWaterlevel, p
           onChange={getHumid}
           className="  bg-[#1e1e1e]  lg:w-[500px] xs:w-[80vw] sm:w-[50vw] rounded-[10px] p-4 border-[0.5px]"
         />
+         {errMessage1 && <p className='text-red-500'>{errMessage1}</p>}
         <input
           type="text"
           value={ph}
@@ -90,6 +137,7 @@ const Query = ({country, setCountry, crop, setCrop, waterlevel, setWaterlevel, p
           placeholder="input the PH"
           className="lg:w-[500px] bg-[#1e1e1e] rounded-[10px] xs:w-[80vw] sm:w-[50vw] p-4  border-[0.5px]"
         />
+          {errMessage2 && <p className='text-red-500'>{errMessage2}</p>}
         <input
           type="text"
           value={waterlevel}
@@ -97,6 +145,7 @@ const Query = ({country, setCountry, crop, setCrop, waterlevel, setWaterlevel, p
           placeholder="input the waterlevel"
           className=" border-[0.5px] bg-[#1e1e1e]  lg:w-[500px] xs:w-[80vw] sm:w-[50vw] rounded-[10px] p-4"
         />
+          {errMessage6 && <p className='text-red-500'>{errMessage6}</p>}
         <input
           type="text"
           value={crop}
@@ -104,6 +153,7 @@ const Query = ({country, setCountry, crop, setCrop, waterlevel, setWaterlevel, p
           placeholder="input the name of crop"
           className="lg:w-[500px] bg-[#1e1e1e] rounded-[10px] xs:w-[80vw] sm:w-[50vw] p-4  border-[0.5px]"
         />
+          {errMessage5 && <p className='text-red-500'>{errMessage5}</p>}
         <input
           type="text"
           value={country}

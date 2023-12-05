@@ -13,7 +13,7 @@ const Hero = () => {
           <p className="text-white headerText1 ">
             {" "}
             Welcome to <br /> Agrisage - <br /> where
-            <span className="bg-green-700 rounded-[10px] p-[2px]">Precision</span> <br /> meets
+            <span className="bg-green-900 rounded-[10px] p-[5px] h-[20px] ">Precision</span> <br /> meets
             agriculture ! <br />{" "}
           </p>
           <p className="text-white headerText">
@@ -23,7 +23,7 @@ const Hero = () => {
           </p>
           <div className=" mt-4 flex  gap-[50px] p-4">
             <Link to='/query'>
-            <button className="text-white bg-green-800 flex gap-[10px] justify-center items-center p-[8px] rounded-[5px] btn1 lg:w-[120px]">
+            <button className="text-white bg-green-800 flex gap-[10px] ml-[-12px] justify-center items-center p-[8px] rounded-[5px] btn1 lg:w-[120px]">
               Start Now <span><HiArrowUpRight /></span> 
             </button>
             </Link>

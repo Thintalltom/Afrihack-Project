@@ -3,6 +3,7 @@ import "./Navbar.css";
 import Logo from "./assets/logo.png";
 import { FiMenu, FiX } from "react-icons/fi";
 import { Link as LinkRoll } from "react-scroll";
+
 import { Link } from "react-router-dom";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -15,8 +16,14 @@ const Navbar = () => {
     setOpen(true);
     console.log("clicked");
   };
+
+  
+    const scrolltoTop = () => {
+      scroll.scrollToTop()
+    }
+  
   return (
-    <div className=" home">
+    <div className=" home bg-[#1e1e1e]">
       <div className="agrisageBox border-b-[0.5px] flex justify-around bg-[#1e1e1e] cursor-pointer fixed  w-[100vw]   p-[10px]">
         <Link to="/">
           <div className="flex   flex-row gap-[20px] items-center w-[200px]">
@@ -49,8 +56,8 @@ const Navbar = () => {
       </div>
 
       {/*Navbar for small screen*/}
-      <div className="lg:hidden sm:block agrisage2">
-        <div className="bg-[#1e1e1e] w-[340px] h-[50px] p-[10px]   flex justify-between fixed">
+      <div className="lg:hidden sm:block xxl:hidden 2xl:hidden bg-[#1e1e1e]">
+        <div className="bg-[#1e1e1e] items-center menu mt-[-10px]  flex justify-between  p-[20px] ">
           <Link to="/">
             <div className="flex   flex-row gap-[5px] items-center w-[200px]">
               <img src={Logo} className="w-[40px]" />
@@ -60,9 +67,9 @@ const Navbar = () => {
 
           <div onClick={handleClick}>
             {open ? (
-              <FiMenu className="text-white" />
+              <FiMenu className="text-white text-2xl" />
             ) : (
-              <FiX className="text-white" />
+              <FiX className="text-white text-2xl" />
             )}
           </div>
         </div>
@@ -70,7 +77,7 @@ const Navbar = () => {
         <div
           className={
             !open
-              ? "text-slate-200 header2 bg-[#1e1e1e] justify-center items-center gap-[20px] h-[400px] flex flex-col gap-[20px]"
+              ? "text-slate-200 header2 bg-[#1e1e1e] align-center   justify-center items-center gap-[20px] h-[400px] flex flex-col gap-[20px]"
               : "hidden"
           }
         >

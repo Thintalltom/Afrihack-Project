@@ -17,11 +17,12 @@
 .header2
 {
     position: fixed;
-    z-index: 2;
-    width: 300px;
-    margin-top: 40px;
+    z-index: 5;
+    width: 400px;
+    margin-top: 10px;
    
 }
+
 
 }
 .home .agrisageBox{

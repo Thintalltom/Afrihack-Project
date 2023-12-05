@@ -1,10 +1,14 @@
 import React from "react";
 import crop3 from "./assets/crop3.png";
 import Agrisage from "./assets/Agrisage.png";
-import { HiArrowUpRight } from "react-icons/hi2";
+import { HiArrowUpRight} from "react-icons/hi2";
 import "./Work.css";
 import { Link } from "react-router-dom";
+import { animateScroll as scroll } from "react-scroll";
 const Contact = () => {
+  const scrolltoTop = () => {
+    scroll.scrollToTop()
+  }
   return (
     <div name='contact' className="contactDiv bg-[#1e1e1e] h-[60rem] ">
       <p className="text-center text-white text-2xl mt-[-5px] p-4 font-bold"> Contact us</p>
@@ -18,12 +22,14 @@ const Contact = () => {
         <a href="mailto:ayomidet905@gmail.com">ayomidet905@gmail.com</a>
         <a href="mailto:adeyemimeshack@gmail.com">adeyemimeshack@gmail.com</a>
         <Link to='/query'>
-        <button className="border-[1px] border-green-500 text-green-500 rounded-[10px] flex gap-[10px] justify-center items-center text-white p-[10px] mx-auto mt-[100px] w-[150px]">
+        <button className="border-[1px] border-green-500 text-green-500 rounded-[10px] flex gap-[10px] justify-center items-center  p-[10px] mx-auto mt-[100px] w-[150px]">
           Start Now <span><HiArrowUpRight /></span> 
         </button>
         </Link>
+       
+
       </div>
-      <img src={Agrisage} className=" mx-auto mt-[50px]" />
+      <img src={Agrisage} className=" mx-auto mt-[50px] " />
     </div>
   );
 };
