@@ -15,7 +15,7 @@ const Query = ({country, setCountry, crop, setCrop, waterlevel, setWaterlevel, p
     const getCountry = (e) => {
       const newValue = e.target.value;
       if(/[^a-zA-Z]/.test(newValue)){
-        setErrMessage5('Error: Please enter only text')
+        setErrMessage5('This field on takes letters')
       }else{
         setErrMessage5('');
         setCountry(newValue);
@@ -24,7 +24,7 @@ const Query = ({country, setCountry, crop, setCrop, waterlevel, setWaterlevel, p
       const getCrop = (e) => {
         const newValue = e.target.value;
         if(/[^a-zA-Z]/.test(newValue)){
-          setErrMessage6('Error: Please enter only text')
+          setErrMessage6('This field on takes letters')
         }else{
           setErrMessage6('');
           setCrop(newValue);
@@ -32,8 +32,8 @@ const Query = ({country, setCountry, crop, setCrop, waterlevel, setWaterlevel, p
       };
       const getPh = (e) => {
         const newValue = e.target.value;
-        if(/^[0-9]*\.?[0-9]*$/.test(newValue)){
-          setErrMessage1('Error: Please enter only numbers')
+        if(/^[+-]?\d*\.?\d*$/.test(newValue)){
+          setErrMessage1('This field on takes numbers')
         }else{
           setErrMessage1('');
           setPh(newValue)
@@ -41,8 +41,8 @@ const Query = ({country, setCountry, crop, setCrop, waterlevel, setWaterlevel, p
       };
       const getWater = (e) => {
         const newValue = e.target.value;
-        if(/^[0-9]*\.?[0-9]*$/.test(newValue)){
-          setErrMessage2('Error: Please enter only numbers')
+        if(/^[+-]?\d*\.?\d*$/.test(newValue)){
+          setErrMessage2('This field on takes numbers')
         }else{
           setErrMessage2('');
           setWaterlevel(newValue);
@@ -50,8 +50,8 @@ const Query = ({country, setCountry, crop, setCrop, waterlevel, setWaterlevel, p
       };
       const getHumid = (e) => {
         const newValue = e.target.value;
-        if(/^[0-9]*\.?[0-9]*$/.test(newValue)){
-          setErrMessage3('Error: Please enter only numbers')
+        if(/^[+-]?\d*\.?\d*$/.test(newValue)){
+          setErrMessage3('This field on takes numbers')
         }else{
           setErrMessage3('');
           setHumidity(newValue);
@@ -59,8 +59,8 @@ const Query = ({country, setCountry, crop, setCrop, waterlevel, setWaterlevel, p
       };
       const getTemp = (e) => {
         const newValue = e.target.value;
-        if(/^[0-9]*\.?[0-9]*$/.test(newValue)){
-          setErrMessage4('Error: Please enter only numbers')
+        if(/^[+-]?\d*\.?\d*$/.test(newValue)){
+          setErrMessage4('This field on takes numbers')
         }else{
           setErrMessage4('');
           setTemperature(newValue);
