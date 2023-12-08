@@ -32,7 +32,7 @@ const Query = ({country, setCountry, crop, setCrop, waterlevel, setWaterlevel, p
       };
       const getPh = (e) => {
         const newValue = e.target.value;
-        if(/[^0-9]/.test(newValue)){
+        if(/^[0-9]*\.?[0-9]*$/.test(newValue)){
           setErrMessage1('Error: Please enter only numbers')
         }else{
           setErrMessage1('');
@@ -41,7 +41,7 @@ const Query = ({country, setCountry, crop, setCrop, waterlevel, setWaterlevel, p
       };
       const getWater = (e) => {
         const newValue = e.target.value;
-        if(/[^0-9]/.test(newValue)){
+        if(/^[0-9]*\.?[0-9]*$/.test(newValue)){
           setErrMessage2('Error: Please enter only numbers')
         }else{
           setErrMessage2('');
@@ -50,7 +50,7 @@ const Query = ({country, setCountry, crop, setCrop, waterlevel, setWaterlevel, p
       };
       const getHumid = (e) => {
         const newValue = e.target.value;
-        if(/[^0-9]/.test(newValue)){
+        if(/^[0-9]*\.?[0-9]*$/.test(newValue)){
           setErrMessage3('Error: Please enter only numbers')
         }else{
           setErrMessage3('');
@@ -59,7 +59,7 @@ const Query = ({country, setCountry, crop, setCrop, waterlevel, setWaterlevel, p
       };
       const getTemp = (e) => {
         const newValue = e.target.value;
-        if(/[^0-9]/.test(newValue)){
+        if(/^[0-9]*\.?[0-9]*$/.test(newValue)){
           setErrMessage4('Error: Please enter only numbers')
         }else{
           setErrMessage4('');
