@@ -32,7 +32,7 @@ const Query = ({country, setCountry, crop, setCrop, waterlevel, setWaterlevel, p
       };
       const getPh = (e) => {
         const newValue = e.target.value;
-        if(/^[+-]?\d*\.?\d*$/.test(newValue)){
+        if (!/^[+-]?\d*\.?\d*$/.test(newValue)){
           setErrMessage1('This field on takes numbers')
         }else{
           setErrMessage1('');
@@ -41,7 +41,7 @@ const Query = ({country, setCountry, crop, setCrop, waterlevel, setWaterlevel, p
       };
       const getWater = (e) => {
         const newValue = e.target.value;
-        if(/^[+-]?\d*\.?\d*$/.test(newValue)){
+        if (!/^[+-]?\d*\.?\d*$/.test(newValue)){
           setErrMessage2('This field on takes numbers')
         }else{
           setErrMessage2('');
@@ -50,7 +50,7 @@ const Query = ({country, setCountry, crop, setCrop, waterlevel, setWaterlevel, p
       };
       const getHumid = (e) => {
         const newValue = e.target.value;
-        if(/^[+-]?\d*\.?\d*$/.test(newValue)){
+        if (!/^[+-]?\d*\.?\d*$/.test(newValue)){
           setErrMessage3('This field on takes numbers')
         }else{
           setErrMessage3('');
@@ -59,7 +59,7 @@ const Query = ({country, setCountry, crop, setCrop, waterlevel, setWaterlevel, p
       };
       const getTemp = (e) => {
         const newValue = e.target.value;
-        if(/^[+-]?\d*\.?\d*$/.test(newValue)){
+        if (!/^[+-]?\d*\.?\d*$/.test(newValue)){
           setErrMessage4('This field on takes numbers')
         }else{
           setErrMessage4('');
