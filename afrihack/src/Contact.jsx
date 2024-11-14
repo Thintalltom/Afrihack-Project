@@ -16,7 +16,7 @@ const Contact = () => {
       <img src={crop3} className="mx-auto mt-9" />
       <div className="flex justify-center items-center flex-col mt-[100px] text-white">
         <a href="mailto:adeyemishedracktimi@gmail.com">
-          adeyemishedracktimi@gmail.com
+          adeyemishadracktimi@gmail.com
         </a>
         <a href="mailto:adeyanjutomide@gmail.com">adeyanjutomide@gmail.com</a>
         <a href="mailto:ayomidet905@gmail.com">ayomidet905@gmail.com</a>
